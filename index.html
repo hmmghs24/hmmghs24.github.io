@@ -239,6 +239,12 @@
     setInterval(updateDateTime, 1000);
     // Initial update
     updateDateTime();
+
+      // Function to redirect to a specified URL
+        function redirectToUrl() {
+            // Change the URL to the one you want to redirect to
+            window.location.href = "https://hmmghs24.github.io/registration";
+        }
   </script>
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -304,10 +310,9 @@
         <p id="fly" class="text-center text p" style="display: block; color: #000066; font-size: 16px; line-height: 24px; margin: 40px 0; text-align: center;">হাজী মুহাম্মদ মহসিন সরকারি উচ্চ বিদ্যালয়ের ২০২৪ ব্যাচের প্রতিনিধিত্বকারী সংগঠন বন্ধুদল। বন্ধুদল উক্ত ব্যাচের শিক্ষার্থীদের মধ্যে যোগাযোগ ও ঐক্য বজায় রাখতে কাজ করছে। হাজী মুহাম্মদ মহসিন সরকারি উচ্চ বিদ্যালয়ের পক্ষে অবকাঠামোগত উন্নয়ন ও প্রচারকার্যে বন্ধুদলের সদস্যরা সহযোগিতা করছেন। বন্ধুদের মধ্যে ঐক্য ও সুসম্পর্ক বজায় রাখা বন্ধুদল এর মূল উদ্দেশ্য।</p>
         <h2 class="slide-in-down" style="text-align: center; margin-top: 20px; margin-bottom: 10px">সদস্য নিবন্ধন</h2>
         <p style="display: block; margin: 40px 0; margin-bottom: 40px; color: #F9546B; font-size: 18px; line-height: 30px; text-align: center;">বন্ধুদল এর সদস্যপদ পেতে নিবন্ধন বা রেজিস্ট্রেশন করুন</p>
-        <a href="https://hmmghs24.github.io/registration/">
-          <button id="button-50" class="d-block mx-auto mb-4" role="button">
-            <img src="assets/registration.png" width="20" height="20"> রেজিস্ট্রেশন করুন </button>
-        </a>
+        <button id="button-50" onclick="redirectToUrl()" class="d-block mx-auto mb-4" role="button">
+            <img src="assets/registration.png" width="20" height="20"> রেজিস্ট্রেশন করুন 
+        </button>
       </section>
       <section id="nairobi">
         <h2 class="slide-in-down" style="text-align: center; margin-top: 20px; margin-bottom: 10px">বিজ্ঞপ্তি</h2>
