@@ -4,8 +4,10 @@
 
 body {
   color: var(--mainColor);
-  font-family: "Quicksand", sans-serif;
-  font-weight: 500;
+  font-family: "varendrafont";
+  src: url('https://hmmghs24.github.io/assets/varendra-regular-v2.1.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 600;
   letter-spacing: 0.5px;
 }
 
