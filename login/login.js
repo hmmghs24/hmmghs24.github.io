@@ -1,8 +1,8 @@
 // Define sample credentials
 const credentials = [
-    { username: "123", password: "123" },
-    { username: "johnDoe", password: "doe123" },
-    { username: "janeSmith", password: "smith456" }
+    { username: "001", password: "\G7yaldpz!" },
+    { username: "002", password: "[M'/0828k=" },
+    { username: "003", password: "\G7yald78" }
 ];
 
 // Function to handle form submission
@@ -16,7 +16,7 @@ function login() {
     
     if (validCredential) {
         alert("Login successful!");
-        // Redirect to another page or do something else here
+            window.location.href = "do.not.disturb.me"; 
     } else {
         alert("Invalid credentials. Please try again.");
     }
