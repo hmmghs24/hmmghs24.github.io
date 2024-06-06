@@ -20,20 +20,16 @@
             <h1 class="my-5">Bondhudal- VOTING APP LOGIN</h1>
             <div class="inputsForm">
               <input
-                type="email"
-                id="loginEmail"
-                class="form-control"
-                placeholder="Enter your email"
+                for="username"
+                placeholder="Enter your ID"
                 required
               />
               <input
                 type="password"
-                id="loginPassword"
-                class="form-control mt-3"
                 placeholder="Enter your password"
-                required
+                for="password"
               />
-              <button id="loginBtn" class="btn btn-main my-4 w-100">
+              <button type="submit" value="Submit" id="loginBtn" class="btn btn-main my-4 w-100">
                 LOG IN
               </button>
               <div class="signupText d-flex justify-content-center gap-2 mt-1">
@@ -44,7 +40,8 @@
         </div>
       </section>
     </main>
-
+    
+    <script src="./js/login.js"></script>
     <script src="./js/bootstrap.bundle.js"></script>
     <script src="./js/sweetalert.min.js"></script>
     <script src="./js/main.js"></script>
