@@ -1,5 +1,6 @@
 // Define sample credentials
 const credentials = [
+    { username: "admin@exmple.com", password: "gidy3£(07" },
     { username: "001", password: "\G7yaldpz!" },
     { username: "002", password: "[M'/0828k=" },
     { username: "003", password: "\G7yald78" }
