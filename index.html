@@ -300,6 +300,26 @@
             // Change the URL to the one you want to redirect to
             window.location.href = "https://hmmghs24.github.io/login/";
         }
+     // script.js
+
+// Define the time of the last update (replace this with your actual time)
+const lastUpdateTime = new Date('2024-06-28T12:00:00Z'); // Example: June 28, 2024, 12:00:00 UTC
+
+// Function to convert numbers to Bengali digits
+function convertToBengaliDigits(number) {
+  const bengaliDigits = ["০", "১", "২", "৩", "৪", "৫", "৬", "৭", "৮", "৯"];
+  return number.toString().split("").map(digit => bengaliDigits[digit]).join("");
+}
+
+function updateTimeText() {
+  const currentTime = new Date();
+  const timeDiff = Math.round((currentTime - lastUpdateTime) / 1000); // Difference in seconds
+
+  let text;
+  if (timeDiff < 60) {
+    text = `সর্বশেষ হালনাগাদ করা হয়েছে একটি মুহূর্ত আগে`; // Less than a minute ago
+  } else if (timeDiff < 
+
   </script>
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -360,7 +380,7 @@
         <h1 class="slide-in-down" style="color: #003d99; text-align: center; margin-top: 10px; margin-bottom: 10px">বন্ধুদল — Bondhudal</h1>
         <h2 class="slide-in-down" style="color: #9999ff; text-align: center; margin-top: 10px; margin-bottom: 10px">হাজী মুহাম্মদ মহসিন সরকারি উচ্চ বিদ্যালয় এর এসএসসি-২৪ ব্যাচের শিক্ষার্থীদের সংগঠন</h2>
         <h2 class="slide-in-down" style="text-align: center; margin-top: 20px; margin-bottom: 10px">স্বাগতম</h2>
-        <p id="fly" class="d-block mx-auto mb-4" style="box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); display: block; margin: 40px 0; margin-bottom: 40px; color: #00008B; font-size: 15px; line-height: 30px; text-align: center; border:3px solid #FF69B4; border-radius: 15px;"> আস্‌সালামু আলাইকুম/নমস্কার! আজ <a id="banglaDate"></a> এবং এখন বাজে <a id="banglaTime"></a>। বন্ধুদল-এর সভায় আপনাকে স্বাগতম। হাজী মুহাম্মদ মহসিন সরকারি উচ্চ বিদ্যালয় এর ১৫০তম বর্ষপূর্তি উপলক্ষে সরাইকে জানাই শুভেচ্ছা। নিবন্ধিত সদস্যরা <a href="https://hmmghs24.github.io/login">Log in</a> করুন। </br> নিবন্ধন করতে নিন্মের "রেজিস্ট্রেশন করুন" বাটনে ক্লিক করুন। </p>
+        <p id="fly" class="d-block mx-auto mb-4" style="box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); display: block; margin: 40px 0; margin-bottom: 40px; color: #00008B; font-size: 15px; line-height: 30px; text-align: center; border:3px solid #FF69B4; border-radius: 15px;"> আস্‌সালামু আলাইকুম/নমস্কার! আজ <a id="banglaDate"></a> এবং এখন বাজে <a id="banglaTime"></a>। বন্ধুদল-এর সভায় আপনাকে স্বাগতম। হাজী মুহাম্মদ মহসিন সরকারি উচ্চ বিদ্যালয় এর ১৫০তম বর্ষপূর্তি উপলক্ষে সরাইকে জানাই শুভেচ্ছা। নিবন্ধিত সদস্যরা <a href="https://hmmghs24.github.io/login">Log in</a> করুন। </br> নিবন্ধন করতে নিন্মের "রেজিস্ট্রেশন করুন" বাটনে ক্লিক করুন। <p id="updateTime">সর্বশেষ হালনাগাদ করা হয়েছে</p></p>
         <img id="fly" id="logo" class="d-block mx-auto mb-4" style="border-radius: 15px; display: block; width:150px; height: auto; margin-top: 10px; margin-bottom: 10px" src="https://hmmghs24.github.io/assets/logo.jpg"></img>
         <h2 class="slide-in-down" style="text-align: center; margin-top: 20px; margin-bottom: 10px">আমাদের সম্পর্কে</h2>
         <p id="fly" class="text-center text p" style="display: block; color: #000066; font-size: 16px; line-height: 24px; margin: 40px 0; text-align: center;">বন্ধুদল একটি ছাত্র সংগঠন। বন্ধুদল ২০২৪ সালের ১১ই মার্চ প্রতিষ্ঠিত হয়। বন্ধুদলের বন্ধুরা ২০১৭ সালের ২৩ই ডিসেম্বর এক তুমুল ভর্তি যুদ্ধে বিজয়ী হয়ে ২০১৮-এ মিলিত হয় হাজী মুহাম্মদ মহসিন সরকারি উচ্চ বিদ্যালয়ে । ছয়টি বছরের স্মৃতিময় পথচলা শেষে ২০২৪ সালের এসএসসি পরীক্ষায় অংশ নেয়। তবে এই বন্ধুগুলো হয়তো হাঁরিয়ে যাবে। সবার অবস্থা ভলো নাও হতে পারে। ব্যস্ততায় হারিয়ে যাবে সবাই। আর দেখা নাও হতে পারে। স্কুল জীবনের বন্ধুত্ব হলো নিস্বার্থ বন্ধুত্ব। এই বন্ধুদের একসাথে রাখতেই কাজ করছে বন্ধুদল। ২০১৮ হতে ২০২৩ পর্যন্ত যাঁরা হাজী মুহাম্মদ মহসিন সরকারি উচ্চ বিদ্যালয়ে প্রাতঃ বা দিবা শাখায় পড়েছে তাঁরা সকলেই বন্ধুদলের সদস্য। </p>
