@@ -300,25 +300,7 @@
             // Change the URL to the one you want to redirect to
             window.location.href = "https://hmmghs24.github.io/login/";
         }
-     // script.js
-
-// Define the time of the last update (replace this with your actual time)
-const lastUpdateTime = new Date('2024-06-28T12:00:00Z'); // Example: June 28, 2024, 12:00:00 UTC
-
-// Function to convert numbers to Bengali digits
-function convertToBengaliDigits(number) {
-  const bengaliDigits = ["০", "১", "২", "৩", "৪", "৫", "৬", "৭", "৮", "৯"];
-  return number.toString().split("").map(digit => bengaliDigits[digit]).join("");
-}
-
-function updateTimeText() {
-  const currentTime = new Date();
-  const timeDiff = Math.round((currentTime - lastUpdateTime) / 1000); // Difference in seconds
-
-  let text;
-  if (timeDiff < 60) {
-    text = `সর্বশেষ হালনাগাদ করা হয়েছে একটি মুহূর্ত আগে`; // Less than a minute ago
-  } else if (timeDiff < 
+    
 
   </script>
   <body>
@@ -500,6 +482,8 @@ function updateTimeText() {
       <ul class="list-inline">
         <li class="list-inline-item">
           <a href="https://hmmghs24.github.io/old_home.html">পুরাতন হোম পেজে দেখুন</a>
+        </li>
+        <li>
           <p id="updateTime">সর্বশেষ হালনাগাদ করা হয়েছে</p>
         </li>
         <br />
@@ -507,4 +491,41 @@ function updateTimeText() {
       </br>
       </div>
   </body>
+    
+  <script>
+    // Define the time of the last update (replace this with your actual time)
+    const lastUpdateTime = new Date('2024-06-28T12:00:00Z'); // Example: June 28, 2024, 12:00:00 UTC
+
+    // Function to convert numbers to Bengali digits
+    function convertToBengaliDigits(number) {
+      const bengaliDigits = ["০", "১", "২", "৩", "৪", "৫", "৬", "৭", "৮", "৯"];
+      return number.toString().split("").map(digit => bengaliDigits[digit]).join("");
+    }
+
+    function updateTimeText() {
+      const currentTime = new Date();
+      const timeDiff = Math.round((currentTime - lastUpdateTime) / 1000); // Difference in seconds
+
+      let text;
+      if (timeDiff < 60) {
+        text = `সর্বশেষ হালনাগাদ করা হয়েছে একটি মুহূর্ত আগে`; // Less than a minute ago
+      } else if (timeDiff < 3600) {
+        const minutes = Math.round(timeDiff / 60);
+        const minutesInBengali = convertToBengaliDigits(minutes);
+        text = `সর্বশেষ হালনাগাদ করা হয়েছে ${minutesInBengali} মিনিট আগে`; // Minutes ago
+      } else {
+        const hours = Math.round(timeDiff / 3600);
+        const hoursInBengali = convertToBengaliDigits(hours);
+        text = `সর্বশেষ হালনাগাদ করা হয়েছে ${hoursInBengali} ঘণ্টা আগে`; // Hours ago
+      }
+
+      document.getElementById('updateTime').textContent = text;
+    }
+
+    // Update the time text initially
+    updateTimeText();
+
+    // Update the time text every minute to keep it accurate
+    setInterval(updateTimeText, 60000); // Update every minute
+  </script>
 </html>
