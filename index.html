@@ -460,7 +460,7 @@
                   <div style="border-radius: 15px; width:100%; background:#eed202; font-size: 18px;color: #ff0f0f;">বিশেষ দ্রষ্টব্য</div>
                   <div style="font-size: x-large; width: 100%;">
                     <span class="plainlinks" id="purgelink">
-                      <span style="color:black">
+                      <span style="color:black; font-weight: 800;">
                         <div style="display: block; margin: 40px 0; color: #ff0f0f; font-size: 16px;  text-align: center;"> বন্ধুদল কোনো রাজনৈতিক দল নয় বা কোনো রাজনৈতিক দলের সাথে সংশ্লিষ্ট নয়। বন্ধুদল কোনো মতাদর্শকে সমর্থন বা প্রচার করে না। বন্ধুদল এর নামে সকল প্রকার আর্থিক লেনদেন হতে বিরত থাকুন। </div>
                       </span>
                     </span>
@@ -488,12 +488,10 @@
       </br>
       </div>
   </body>
-    
   <script>
     // Define the time of the last update (replace this with your actual time)
     const lastUpdateTime = new Date('2024-06-29T06:30:00Z'); 
 
-    // Function to convert numbers to Bengali digits
     function convertToBengaliDigits(number) {
       const bengaliDigits = ["০", "১", "২", "৩", "৪", "৫", "৬", "৭", "৮", "৯"];
       return number.toString().split("").map(digit => bengaliDigits[digit]).join("");
@@ -519,10 +517,8 @@
       document.getElementById('updateTime').textContent = text;
     }
 
-    // Update the time text initially
-    updateTimeText();
+   updateTimeText();
 
-    // Update the time text every minute to keep it accurate
-    setInterval(updateTimeText, 60000); // Update every minute
+   setInterval(updateTimeText, 60000); // Update every minute
   </script>
 </html>
