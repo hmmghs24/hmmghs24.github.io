@@ -209,8 +209,8 @@
           width: 100%;
           font-weight: 700;
           text-size: 12px;
-        margin-left: auto;
-       margin-right: auto;
+          margin-left: auto;
+          margin-right: auto;
         }
 
         td {
@@ -220,57 +220,51 @@
 
         tr:nth-child(even) {
           background-color: #dcf0fa;
-     
-        input[type="text"] {
-        padding: 6px;
-        width: 100%;
-        box-sizing: border-box;
-        margin-bottom: 10px;
-        margin-left: auto;
-       margin-right: auto;
-    }
-</style>
-<script>
-// JavaScript for filtering all tables
-function filterAllTables() {
-    var input, filter, tables, table, tr, td, i, j, txtValue;
-    input = document.getElementById("filterInput");
-    filter = input.value.toUpperCase();
-    tables = document.getElementsByTagName("table");
 
-    for (i = 0; i < tables.length; i++) {
-        table = tables[i];
-        tr = table.getElementsByTagName("tr");
-
-        for (j = 0; j < tr.length; j++) {
-            let matchFound = false; // Flag to track if any cell matches the filter
-            td = tr[j].getElementsByTagName("td");
-
-            for (let k = 0; k < td.length; k++) {
+          input[type="text"] {
+            padding: 6px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            margin-left: auto;
+            margin-right: auto;
+          }
+      </style>
+      <script>
+        // JavaScript for filtering all tables
+        function filterAllTables() {
+          var input, filter, tables, table, tr, td, i, j, txtValue;
+          input = document.getElementById("filterInput");
+          filter = input.value.toUpperCase();
+          tables = document.getElementsByTagName("table");
+          for (i = 0; i < tables.length; i++) {
+            table = tables[i];
+            tr = table.getElementsByTagName("tr");
+            for (j = 0; j < tr.length; j++) {
+              let matchFound = false; // Flag to track if any cell matches the filter
+              td = tr[j].getElementsByTagName("td");
+              for (let k = 0; k < td.length; k++) {
                 let cell = td[k];
                 if (cell) {
-                    txtValue = cell.textContent || cell.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        matchFound = true;
-                        break; // Break the inner loop once a match is found in this row
-                    }
+                  txtValue = cell.textContent || cell.innerText;
+                  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    matchFound = true;
+                    break; // Break the inner loop once a match is found in this row
+                  }
                 }
-            }
-
-            // Show or hide the row based on matchFound flag
-            if (matchFound) {
+              }
+              // Show or hide the row based on matchFound flag
+              if (matchFound) {
                 tr[j].style.display = "";
-            } else {
+              } else {
                 tr[j].style.display = "none";
+              }
             }
+          }
         }
-    }
-}
-
-// Add event listener to filter input
-document.getElementById("filterInput").addEventListener("keyup", filterAllTables);
-</script>
-            
+        // Add event listener to filter input
+        document.getElementById("filterInput").addEventListener("keyup", filterAllTables);
+      </script>
       <body>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
           <div class="container-fluid">
@@ -326,937 +320,937 @@ document.getElementById("filterInput").addEventListener("keyup", filterAllTables
             <h1 class="slide-in-down" style="color: #003d99; text-align: center; margin-bottom: 10px">বন্ধুদল — Bondhudal</h1>
             <h1 class="header h1" style="color: #003d99;  font-size: 30px; line-height: 40px; margin: 40px 0 24px; text-align: center; font-weight: 600;">সকলের বর্তমান অবস্থান</h1>
             <h2>* তালিকার তথ্যসমূহ বিভিন্ন নির্ভরযোগ্য সূত্র হতে নেয়া হয়েছে। </h1>
-              <h2>* <a href="https://hmmghs24.github.io/result">সকলের এসএসসির ফলাফল দেখতে এখানে ক্লিক করুন।</a></h2>
-              <h2>* <a href="https://hmmghs24.github.io/registration"> বন্ধুদল-এর রেজিস্ট্রেশন করতে এখানে ক্লিক করুন।</a></h2>
+              <h2>* <a href="https://hmmghs24.github.io/result">সকলের এসএসসির ফলাফল দেখতে এখানে ক্লিক করুন।</a>
+              </h2>
+              <h2>* <a href="https://hmmghs24.github.io/registration"> বন্ধুদল-এর রেজিস্ট্রেশন করতে এখানে ক্লিক করুন।</a>
+              </h2>
               <h2>* Last updated on: 24 June, 2024; 9:55 AM</h2>
               <input type="text" id="filterInput" placeholder="নাম অথবা প্রতিষ্ঠান খুঁজুন">
               <div class="table-container">
-              <h2>List: 01; Shift: Morning; Group: Science; Total: 65</h2>
-              <table id="table1" class="table table-bordered table-hover table-condensed">
-                <thead>
-                  <tr>
-                    <th title="Field #1">SL</th>
-                    <th title="Field #2">NAME</th>
-                    <th title="Field #3">ID</th>
-                    <th title="Field #4">PRESENT POSITION</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td align="right">1</td>
-                    <td>ABHOY ROY</td>
-                    <td align="right">2108102</td>
-                    <td>Hazera-Taju Degree College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">2</td>
-                    <td>ABIR DAS GUPTA</td>
-                    <td align="right">2108103</td>
-                    <td>Chittagong Govt. City College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">3</td>
-                    <td>ABRISHAM ENAYET RAKIB</td>
-                    <td align="right">2108104</td>
-                    <td>Chittagong Govt. City College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">4</td>
-                    <td>ADRITA DAS</td>
-                    <td align="right">2108105</td>
-                    <td>Govt. Hazi Muhammad Mohsin College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">5</td>
-                    <td>ALMAS AHASAN TAMIM</td>
-                    <td align="right">2108111</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">6</td>
-                    <td>ANINDA KARAN</td>
-                    <td align="right">2108112</td>
-                    <td>Islamia Degree College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">7</td>
-                    <td>ANINDYA AHSAN</td>
-                    <td align="right">2108113</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">8</td>
-                    <td>ANKAN CHOWDHURY</td>
-                    <td align="right">2108114</td>
-                    <td>Bakalia Govt. College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">9</td>
-                    <td>ARITRA DAS</td>
-                    <td align="right">2108116</td>
-                    <td>Chittagong Govt. City College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">10</td>
-                    <td>ARITRA MOJKURI</td>
-                    <td align="right">2108118</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">11</td>
-                    <td>ARITRA DAS</td>
-                    <td align="right">2108117</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">12</td>
-                    <td>ARMAN SHAHRIAR</td>
-                    <td align="right">2108119</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">13</td>
-                    <td>AVIRUP DAS GUPTA</td>
-                    <td align="right">2108122</td>
-                    <td>SAINT PLACIDS SCHOOL AND COLLEGE</td>
-                  </tr>
-                  <tr>
-                    <td align="right">14</td>
-                    <td>AYAN NANDY</td>
-                    <td align="right">2108208</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">15</td>
-                    <td>AYUSH DASH</td>
-                    <td align="right">2108124</td>
-                    <td>Chattogram Government Model School & College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">16</td>
-                    <td>AZIM HOSSAIN TAMIM</td>
-                    <td align="right">2108110</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">17</td>
-                    <td>BISHAL BARUA ARKA</td>
-                    <td align="right">2108125</td>
-                    <td>Hazera-Taju Degree College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">18</td>
-                    <td>DEBANGAN PATOARY</td>
-                    <td align="right">2108126</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">19</td>
-                    <td>DEBORSHI CHOWDHURY</td>
-                    <td align="right">2108127</td>
-                    <td>Chattogram Cantonment Public College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">20</td>
-                    <td>DEBRAJ BARUA</td>
-                    <td align="right">2108128</td>
-                    <td>Hazera-Taju Degree College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">21</td>
-                    <td>DIPRO DAS</td>
-                    <td align="right">2108129</td>
-                    <td>Chittagong College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">22</td>
-                    <td>DURJOY BHATTACHARJEE</td>
-                    <td align="right">2108130</td>
-                    <td>Govt. Commerce College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">23</td>
-                    <td>DURJOY BHOWMICK</td>
-                    <td align="right">2108131</td>
-                    <td>Islamia Degree College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">24</td>
-                    <td>ENAN ALHOSSAIN</td>
-                    <td align="right">2108132</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">25</td>
-                    <td>FYAZ KHAN</td>
-                    <td align="right">2108133</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">26</td>
-                    <td>HAMIM MAHMUD</td>
-                    <td align="right">2108134</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">27</td>
-                    <td>HASNAIN CHOWDHURY SIAM</td>
-                    <td align="right">2108135</td>
-                    <td>Gachhbaria Govt. College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">28</td>
-                    <td>IMAADUL ISLAM CHOWDHURY</td>
-                    <td align="right">2108138</td>
-                    <td>Chattogram Government Model School & College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">29</td>
-                    <td>IMAMUL HOQUE</td>
-                    <td align="right">2108139</td>
-                    <td>Hazera-Taju Degree College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">30</td>
-                    <td>ISHMAM BIN KALAM</td>
-                    <td align="right">2108140</td>
-                    <td>Hazera-Taju Degree College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">31</td>
-                    <td>MAHEDI HASAN</td>
-                    <td align="right">2108156</td>
-                    <td>Govt. Hazi Muhammad Mohsin College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">32</td>
-                    <td>MAIAZ JAWAD TIHAN</td>
-                    <td align="right">2108141</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">33</td>
-                    <td>MAQLUKAT MD MOSTAFA HAIDER BAHAR</td>
-                    <td align="right">2108160</td>
-                    <td>Govt. Hazi Muhammad Mohsin College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">34</td>
-                    <td>MD ABU FARHAD REHAM</td>
-                    <td align="right">2108142</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">35</td>
-                    <td>MD BAIZED HOSSAIN</td>
-                    <td align="right">2108145</td>
-                  </tr>
-                  <tr>
-                    <td align="right">36</td>
-                    <td>MD ISRAKUL AWSAT</td>
-                    <td align="right">2108147</td>
-                    <td>Bakalia Govt. College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">37</td>
-                    <td>MD MOHIUDDIN CHISTY</td>
-                    <td align="right">2108159</td>
-                    <td>Chittagong College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">38</td>
-                    <td>MD MUNTASIR MAMUN NAHIN</td>
-                    <td align="right">2108148</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">39</td>
-                    <td>MD NAIMUR RAHAMAN</td>
-                    <td align="right">2108150</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">40</td>
-                    <td>MD RAYAN UL HOQUE</td>
-                    <td align="right">2108170</td>
-                    <td>Hazera-Taju Degree College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">41</td>
-                    <td>MD REEHANUL ISLAM</td>
-                    <td align="right">2108151</td>
-                    <td>Govt. Ashekane Awlia Degree College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">42</td>
-                    <td>MD ROBIUL ALAM</td>
-                    <td align="right">2108152</td>
-                    <td>Bakalia Govt. College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">43</td>
-                    <td>Md YEAHIA CHOWDHURY</td>
-                    <td align="right">2108154</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">44</td>
-                    <td>MOHAMMAD ABDULLAABIR</td>
-                    <td align="right">2108157</td>
-                    <td>Hazera-Taju Degree College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">45</td>
-                    <td>MOHAMMAD TAHSANUL ALAM</td>
-                    <td align="right">2108153</td>
-                    <td>Govt. Commerce College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">46</td>
-                    <td>MOHAMMAD TALHA ZOBAYER</td>
-                    <td align="right">2108158</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">47</td>
-                    <td>MUHTASIM BILLAH ZARIR</td>
-                    <td align="right">2108162</td>
-                    <td>Ispahani Public School And College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">48</td>
-                    <td>MUSFIQ KAMAL SAMIN</td>
-                    <td align="right">2108163</td>
-                    <td>Govt. Hazi Muhammad Mohsin College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">49</td>
-                    <td>NILADRY BANIK NIDHI</td>
-                    <td align="right">2108164</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">50</td>
-                    <td>PINAK MALLICK</td>
-                    <td align="right">2108165</td>
-                    <td>Chattogram Bandar College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">51</td>
-                    <td>RATUL SEN</td>
-                    <td align="right">2108169</td>
-                    <td>Bakalia Govt. College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">52</td>
-                    <td>RIDDHI BARUA</td>
-                    <td align="right">2108171</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">53</td>
-                    <td>ROHIT SINGHA</td>
-                    <td align="right">2108172</td>
-                    <td>Govt. Hazi Muhammad Mohsin College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">54</td>
-                    <td>ROKY CHOWDHURY</td>
-                    <td align="right">2108173</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">55</td>
-                    <td>SAYAN BISWAS</td>
-                    <td align="right">2108179</td>
-                    <td>Islamia Degree College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">56</td>
-                    <td>SAYED SAFAYET QAYUM NURAN</td>
-                    <td align="right">2108174</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">57</td>
-                    <td>SHOVON DEB NOBEL</td>
-                    <td align="right">2108181</td>
-                    <td>Bakalia Govt. College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">58</td>
-                    <td>SIDHARTHA BHATTACHARJEE</td>
-                    <td align="right">2108182</td>
-                    <td>Govt. Hazi Muhammad Mohsin College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">59</td>
-                    <td>SIDRAT MAHMUD SIHAN</td>
-                    <td align="right">2108183</td>
-                    <td>COXS BAZAR GOVT. COLLEGE</td>
-                  </tr>
-                  <tr>
-                    <td align="right">60</td>
-                    <td>SOMISHWER CHAKRABORTY</td>
-                    <td align="right">2108184</td>
-                    <td>Bakalia Govt. College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">61</td>
-                    <td>SOUMYA CHOWDHURY</td>
-                    <td align="right">2108185</td>
-                    <td>Sir Ashutosh Govt. College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">62</td>
-                    <td>SOUMYA SARKAR</td>
-                    <td align="right">2108186</td>
-                    <td>Hazera-Taju Degree College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">63</td>
-                    <td>SWARIT SEN</td>
-                    <td align="right">2108178</td>
-                    <td>Chittagong City Corporation Kaiser-Niloufer College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">64</td>
-                    <td>TANMOY MOHAJAN</td>
-                    <td align="right">2108190</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">65</td>
-                    <td>TOWFIQUE AHMED TANVIR</td>
-                    <td align="right">2108192</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-                  </div>
-
-<div class="table-container">
-              <h2>List: 02; Shift: Morning; Group: Businesses Studies; Total: 15</h2>
-              <table id="table2" class="table table-bordered table-hover table-condensed">
-                <thead>
-                  <tr>
-                    <th title="Field #1">SL</th>
-                    <th title="Field #2">NAME</th>
-                    <th title="Field #3">ID</th>
-                    <th title="Field #4">PRESENT POSITION</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td align="right">1</td>
-                    <td>ADITYA DAS</td>
-                    <td align="right">2108203</td>
-                    <td>Hazera-Taju Degree College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">2</td>
-                    <td>AVOY CHOWDHURY</td>
-                    <td align="right">2108123</td>
-                    <td>Chattogram Cantonment Public College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">3</td>
-                    <td>IFTEKHAR UDDIN MAHMUD</td>
-                    <td align="right">2108137</td>
-                    <td>Govt. Commerce College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">4</td>
-                    <td>IFTEKHER AHMED RIZVI</td>
-                    <td align="right">2108136</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">5</td>
-                    <td>MD NAIM AHSAN</td>
-                    <td align="right">2108149</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">6</td>
-                    <td>MOHAMMED ARIFUL ISLAM</td>
-                    <td align="right">2108144</td>
-                    <td>Bakalia Govt. College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">7</td>
-                    <td>MOHAMMED RIDOY</td>
-                    <td align="right">2108234</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">8</td>
-                    <td>MOHAMMED TASHRIF KAMAL</td>
-                    <td align="right">2108237</td>
-                    <td>Govt. Commerce College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">9</td>
-                    <td>MOHAMMED TOWSHIK AZAM LUBAN</td>
-                    <td align="right">2108238</td>
-                    <td></td>
-                  </tr>
-                  <td align="right">10</td>
-                  <td>MURTAZA MURSHED MUNTASIR</td>
-                  <td align="right">2108241</td>
-                  <td>Govt. Hazi Muhammad Mohsin College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">11</td>
-                    <td>PRANTA DEY</td>
-                    <td align="right">2108244</td>
-                    <td>Govt. Commerce College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">12</td>
-                    <td>PREM DHAR</td>
-                    <td align="right">2108246</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">13</td>
-                    <td>PRINCE NAG</td>
-                    <td align="right">2108248</td>
-                    <td>Govt. Commerce College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">14</td>
-                    <td>PROTUL BARUA</td>
-                    <td align="right">2108168</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">15</td>
-                    <td>SARFORAZ ABDULLAH</td>
-                    <td align="right">2108255</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">16</td>
-                    <td>SHAYON DAS GUPTA</td>
-                    <td align="right">2108180</td>
-                    <td>Hazera-Taju Degree College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">17</td>
-                    <td>SHREYAS CHOWDHURY</td>
-                    <td align="right">2108187</td>
-                    <td>None</td>
-                  </tr>
-                  <tr>
-                    <td align="right">18</td>
-                    <td>SWOMOYA GHOSH</td>
-                    <td align="right">2108264</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-    </div>
-
-<div class="table-container">
-              <h2>List: 03; Shift: Day; Group: Science; Total::72</h2>
-              <table id="table3" class="table table-bordered table-hover table-condensed">
-                <thead>
-                  <tr>
-                    <th title="Field #1">SL</th>
-                    <th title="Field #2">NAME</th>
-                    <th title="Field #3">ID</th>
-                    <th title="Field #4">PRESENT POSITION</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td align="right">1</td>
-                    <td>A.K.M. SAMSBIN ALAM</td>
-                    <td align="right">2108201</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">2</td>
-                    <td>ABDULLAH AL NOMAN CHOWDHURY</td>
-                    <td align="right">2108202</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">3</td>
-                    <td>AFNAN MAHMOOD</td>
-                    <td align="right">2108204</td>
-                  </tr>
-                  <tr>
-                    <td align="right">4</td>
-                    <td>Ahsan Siddky Rifat</td>
-                    <td align="right">2310298</td>
+                <h2>List: 01; Shift: Morning; Group: Science; Total: 65</h2>
+                <table id="table1" class="table table-bordered table-hover table-condensed">
+                  <thead>
+                    <tr>
+                      <th title="Field #1">SL</th>
+                      <th title="Field #2">NAME</th>
+                      <th title="Field #3">ID</th>
+                      <th title="Field #4">PRESENT POSITION</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td align="right">1</td>
+                      <td>ABHOY ROY</td>
+                      <td align="right">2108102</td>
+                      <td>Hazera-Taju Degree College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">2</td>
+                      <td>ABIR DAS GUPTA</td>
+                      <td align="right">2108103</td>
+                      <td>Chittagong Govt. City College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">3</td>
+                      <td>ABRISHAM ENAYET RAKIB</td>
+                      <td align="right">2108104</td>
+                      <td>Chittagong Govt. City College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">4</td>
+                      <td>ADRITA DAS</td>
+                      <td align="right">2108105</td>
+                      <td>Govt. Hazi Muhammad Mohsin College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">5</td>
+                      <td>ALMAS AHASAN TAMIM</td>
+                      <td align="right">2108111</td>
                       <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">5</td>
-                    <td>ANKAN CHY</td>
-                    <td align="right">2108205</td>
+                    </tr>
+                    <tr>
+                      <td align="right">6</td>
+                      <td>ANINDA KARAN</td>
+                      <td align="right">2108112</td>
+                      <td>Islamia Degree College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">7</td>
+                      <td>ANINDYA AHSAN</td>
+                      <td align="right">2108113</td>
                       <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">6</td>
-                    <td>ANNOY BHOWMIK</td>
-                    <td align="right">2108206</td>
-                     <td>Bakalia Govt. College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">7</td>
-                    <td>ARGHA BARUA</td>
-                    <td align="right">2108207</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">8</td>
-                    <td>DEBOJIT DAS</td>
-                    <td align="right">2108209</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">9</td>
-                    <td>FAHIMUL ISLAM</td>
-                    <td align="right">2108210</td>
-                  </tr>
-                  <tr>
-                    <td align="right">10</td>
-                    <td>FARDIN AHMED SAMIR</td>
-                    <td align="right">2209287</td>
-                  </tr>
-                  <tr>
-                    <td align="right">11</td>
-                    <td>FARHAN HASIN FAYSAL</td>
-                    <td align="right">2209281</td>
-                  </tr>
-                  <tr>
-                    <td align="right">12</td>
-                    <td>GALIB AHMED AMIN</td>
-                    <td align="right">2108211</td>
-                  </tr>
-                  <tr>
-                    <td align="right">13</td>
-                    <td>JITU ROY</td>
-                    <td align="right">2209285</td>
-                  </tr>
-                  <tr>
-                    <td align="right">14</td>
-                    <td>KASIB KHAN</td>
-                    <td align="right">2108214</td>
-                  </tr>
-                  <tr>
-                    <td align="right">15</td>
-                    <td>KAZI ATIQUR RAHMAN</td>
-                    <td align="right">2108215</td>
-                  </tr>
-                  <tr>
-                    <td align="right">16</td>
-                    <td>MANOB DEVNATH</td>
-                    <td align="right">2108219</td>
-                  </tr>
-                  <tr>
-                    <td align="right">17</td>
-                    <td>MD ADIYAT AZAD FAMAN</td>
-                    <td align="right">2108220</td>
-                  </tr>
-                  <tr>
-                    <td align="right">18</td>
-                    <td>MD MAHARAB HOSSAIN CHOWDHURY</td>
-                    <td align="right">2108218</td>
-                  </tr>
-                  <tr>
-                    <td align="right">19</td>
-                    <td>MD SAHARIAR NUR</td>
-                    <td align="right">2108235</td>
-                  </tr>
-                  <tr>
-                    <td align="right">20</td>
-                    <td>MD. ABDULLAH AL MAMUN</td>
-                    <td align="right">2209292</td>
-                  </tr>
-                  <tr>
-                    <td align="right">21</td>
-                    <td>MD. ABDUS SATTAR</td>
-                    <td align="right">2209290</td>
-                  </tr>
-                  <tr>
-                    <td align="right">22</td>
-                    <td>MD. HASRAT IBNUR HASIB</td>
-                    <td align="right">2310295</td>
-                  </tr>
-                  <tr>
-                    <td align="right">23</td>
-                    <td>MD. JAHIDULALAM MAHIN</td>
-                    <td align="right">2209282</td>
-                  </tr>
-                  <tr>
-                    <td align="right">24</td>
-                    <td>MD. MAHMUDUL HASAN</td>
-                    <td align="right">2108222</td>
-                  </tr>
-                  <tr>
-                    <td align="right">25</td>
-                    <td>MIRAJ ALI KHAN</td>
-                    <td align="right">2108223</td>
-                  </tr>
-                  <tr>
-                    <td align="right">26</td>
-                    <td>MOHAMMAD FAHAD ALAM</td>
-                    <td align="right">2209293</td>
-                  </tr>
-                  <tr>
-                    <td align="right">27</td>
-                    <td>MOHAMMAD NAIF</td>
-                    <td align="right">2209289</td>
-                  </tr>
-                  <tr>
-                    <td align="right">28</td>
-                    <td>MOHAMMAD NAZMUS SAKIB</td>
-                    <td align="right">2108217</td>
-                  </tr>
-                  <tr>
-                    <td align="right">29</td>
-                    <td>MOHAMMAD SAFIN ISLAM IFAZ</td>
-                    <td align="right">2209283</td>
-                  </tr>
-                  <tr>
-                    <td align="right">30</td>
-                    <td>MOHAMMAD SAMIR</td>
-                    <td align="right">2209284</td>
-                  </tr>
-                  <tr>
-                    <td align="right">31</td>
-                    <td>MOHAMMAD TAHASIN MAHAMUD</td>
-                    <td align="right">2108236</td>
-                  </tr>
-                  <tr>
-                    <td align="right">32</td>
-                    <td>MOHAMMED ABRAR AMIN</td>
-                    <td align="right">2108216</td>
-                  </tr>
-                  <tr>
-                    <td align="right">33</td>
-                    <td>MOHAMMED AL AMIN TAMIM</td>
-                    <td align="right">2108227</td>
-                  </tr>
-                  <tr>
-                    <td align="right">34</td>
-                    <td>MOHAMMED ASFAK UDDIN SIDDIQE</td>
-                    <td align="right">2108228</td>
-                  </tr>
-                  <tr>
-                    <td align="right">35</td>
-                    <td>MOHAMMED AZIZ KABIR</td>
-                    <td align="right">2108229</td>
-                  </tr>
-                  <tr>
-                    <td align="right">36</td>
-                    <td>MOHAMMED JOBAYED HOSSAIN</td>
-                    <td align="right">2108230</td>
-                  </tr>
-                  <tr>
-                    <td align="right">37</td>
-                    <td>MOHAMMED MOHSIN ABRAR</td>
-                    <td align="right">2108231</td>
-                  </tr>
-                  <tr>
-                    <td align="right">38</td>
-                    <td>MOHAMMED MUTTAKIN MAHIB</td>
-                    <td align="right">2108232</td>
-                  </tr>
-                  <tr>
-                    <td align="right">39</td>
-                    <td>MUGDHA BARUA</td>
-                    <td align="right">2310297</td>
+                    </tr>
+                    <tr>
+                      <td align="right">8</td>
+                      <td>ANKAN CHOWDHURY</td>
+                      <td align="right">2108114</td>
+                      <td>Bakalia Govt. College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">9</td>
+                      <td>ARITRA DAS</td>
+                      <td align="right">2108116</td>
+                      <td>Chittagong Govt. City College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">10</td>
+                      <td>ARITRA MOJKURI</td>
+                      <td align="right">2108118</td>
                       <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">40</td>
-                    <td>MUSHFIQ-US-SALEHIN</td>
-                    <td align="right">2108242</td>
+                    </tr>
+                    <tr>
+                      <td align="right">11</td>
+                      <td>ARITRA DAS</td>
+                      <td align="right">2108117</td>
                       <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">41</td>
-                    <td>NILOY DAS GUPTA</td>
-                    <td align="right">2108243</td>
+                    </tr>
+                    <tr>
+                      <td align="right">12</td>
+                      <td>ARMAN SHAHRIAR</td>
+                      <td align="right">2108119</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td align="right">13</td>
+                      <td>AVIRUP DAS GUPTA</td>
+                      <td align="right">2108122</td>
+                      <td>SAINT PLACIDS SCHOOL AND COLLEGE</td>
+                    </tr>
+                    <tr>
+                      <td align="right">14</td>
+                      <td>AYAN NANDY</td>
+                      <td align="right">2108208</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td align="right">15</td>
+                      <td>AYUSH DASH</td>
+                      <td align="right">2108124</td>
                       <td>Chattogram Government Model School & College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">42</td>
-                    <td>PRANTIK BHATTACHARJEE</td>
-                    <td align="right">2108245</td>
+                    </tr>
+                    <tr>
+                      <td align="right">16</td>
+                      <td>AZIM HOSSAIN TAMIM</td>
+                      <td align="right">2108110</td>
                       <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">43</td>
-                    <td>PRIANTA DEBNATH</td>
-                    <td align="right">2108247</td>
+                    </tr>
+                    <tr>
+                      <td align="right">17</td>
+                      <td>BISHAL BARUA ARKA</td>
+                      <td align="right">2108125</td>
+                      <td>Hazera-Taju Degree College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">18</td>
+                      <td>DEBANGAN PATOARY</td>
+                      <td align="right">2108126</td>
                       <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">44</td>
-                    <td>RABBI HOSSEN FAHIM</td>
-                    <td align="right">2108276</td>
+                    </tr>
+                    <tr>
+                      <td align="right">19</td>
+                      <td>DEBORSHI CHOWDHURY</td>
+                      <td align="right">2108127</td>
+                      <td>Chattogram Cantonment Public College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">20</td>
+                      <td>DEBRAJ BARUA</td>
+                      <td align="right">2108128</td>
+                      <td>Hazera-Taju Degree College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">21</td>
+                      <td>DIPRO DAS</td>
+                      <td align="right">2108129</td>
+                      <td>Chittagong College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">22</td>
+                      <td>DURJOY BHATTACHARJEE</td>
+                      <td align="right">2108130</td>
+                      <td>Govt. Commerce College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">23</td>
+                      <td>DURJOY BHOWMICK</td>
+                      <td align="right">2108131</td>
+                      <td>Islamia Degree College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">24</td>
+                      <td>ENAN ALHOSSAIN</td>
+                      <td align="right">2108132</td>
                       <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">45</td>
-                    <td>RAJ DAS GUPTA</td>
-                    <td align="right">2209279</td>
+                    </tr>
+                    <tr>
+                      <td align="right">25</td>
+                      <td>FYAZ KHAN</td>
+                      <td align="right">2108133</td>
                       <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">46</td>
-                    <td>RAJKUMAR SEAL</td>
-                    <td align="right">2108249</td>
-                  </tr>
-                  <tr>
-                    <td align="right">47</td>
-                    <td>RANABIR SAHA</td>
-                    <td align="right">2108250</td>
-                  </tr>
-                  <tr>
-                    <td align="right">48</td>
-                    <td>SAAD BIN JABIR</td>
-                    <td align="right">2108252</td>
-                  </tr>
-                  <tr>
-                    <td align="right">49</td>
-                    <td>SADMAN SAKIB</td>
-                    <td align="right">2108253</td>
-                  </tr>
-                  <tr>
-                    <td align="right">50</td>
-                    <td>SAHAL SHARIF</td>
-                    <td align="right">2209291</td>
-                  </tr>
-                  <tr>
-                    <td align="right">51</td>
-                    <td>SAIDUL ISLAM</td>
-                    <td align="right">2108254</td>
-                  </tr>
-                  <tr>
-                    <td align="right">52</td>
-                    <td>SAKIBUL ISLAM SAKIB</td>
-                    <td align="right">2209280</td>
-                  </tr>
-                  <tr>
-                    <td align="right">53</td>
-                    <td>SHAHADAT HOSSAIN</td>
-                    <td align="right">2108256</td>
-                  </tr>
-                  <tr>
-                    <td align="right">54</td>
-                    <td>SHAYON SEN</td>
-                    <td align="right">2108257</td>
-                  </tr>
-                  <tr>
-                    <td align="right">55</td>
-                    <td>SHOUMYA BISWAS</td>
-                    <td align="right">2108259</td>
-                  </tr>
-                  <tr>
-                    <td align="right">56</td>
-                    <td>SOURAV MOHAJON</td>
-                    <td align="right">2209294</td>
-                  </tr>
-                  <tr>
-                    <td align="right">57</td>
-                    <td>SUDIP SEN</td>
-                    <td align="right">2310296</td>
-                  </tr>
-                  <tr>
-                    <td align="right">58</td>
-                    <td>SUJAY BARUA</td>
-                    <td align="right">2108261</td>
-                  </tr>
-                  <tr>
-                    <td align="right">59</td>
-                    <td>SUSANTA BARUA</td>
-                    <td align="right">2108262</td>
-                  </tr>
-                  <tr>
-                    <td align="right">60</td>
-                    <td>SWAPNIL DAS</td>
-                    <td align="right">2108263</td>
+                    </tr>
+                    <tr>
+                      <td align="right">26</td>
+                      <td>HAMIM MAHMUD</td>
+                      <td align="right">2108134</td>
                       <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">61</td>
-                    <td>SYED AMIRUL ISLAM MAHMUD</td>
-                    <td align="right">2108265</td>
+                    </tr>
+                    <tr>
+                      <td align="right">27</td>
+                      <td>HASNAIN CHOWDHURY SIAM</td>
+                      <td align="right">2108135</td>
+                      <td>Gachhbaria Govt. College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">28</td>
+                      <td>IMAADUL ISLAM CHOWDHURY</td>
+                      <td align="right">2108138</td>
+                      <td>Chattogram Government Model School & College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">29</td>
+                      <td>IMAMUL HOQUE</td>
+                      <td align="right">2108139</td>
+                      <td>Hazera-Taju Degree College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">30</td>
+                      <td>ISHMAM BIN KALAM</td>
+                      <td align="right">2108140</td>
+                      <td>Hazera-Taju Degree College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">31</td>
+                      <td>MAHEDI HASAN</td>
+                      <td align="right">2108156</td>
+                      <td>Govt. Hazi Muhammad Mohsin College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">32</td>
+                      <td>MAIAZ JAWAD TIHAN</td>
+                      <td align="right">2108141</td>
                       <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">62</td>
-                    <td>SYED MD ABRAR MUSTAKIM</td>
-                    <td align="right">2108266</td>
-                     <td>Chittagong Govt. City College</td>
-                  </tr>
-                  <tr>
-                    <td align="right">63</td>
-                    <td>SYED OBIDUL MUNTASIR</td>
-                    <td align="right">2108267</td>
+                    </tr>
+                    <tr>
+                      <td align="right">33</td>
+                      <td>MAQLUKAT MD MOSTAFA HAIDER BAHAR</td>
+                      <td align="right">2108160</td>
+                      <td>Govt. Hazi Muhammad Mohsin College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">34</td>
+                      <td>MD ABU FARHAD REHAM</td>
+                      <td align="right">2108142</td>
                       <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">64</td>
-                    <td>TAHSIN HOSSAIN</td>
-                    <td align="right">2108268</td>
+                    </tr>
+                    <tr>
+                      <td align="right">35</td>
+                      <td>MD BAIZED HOSSAIN</td>
+                      <td align="right">2108145</td>
+                    </tr>
+                    <tr>
+                      <td align="right">36</td>
+                      <td>MD ISRAKUL AWSAT</td>
+                      <td align="right">2108147</td>
+                      <td>Bakalia Govt. College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">37</td>
+                      <td>MD MOHIUDDIN CHISTY</td>
+                      <td align="right">2108159</td>
+                      <td>Chittagong College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">38</td>
+                      <td>MD MUNTASIR MAMUN NAHIN</td>
+                      <td align="right">2108148</td>
                       <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">65</td>
-                    <td>TAJBIR AHMED CHOWDHURY</td>
-                    <td align="right">2209286</td>
-                  </tr>
-                  <tr>
-                    <td align="right">66</td>
-                    <td>TANJIM SAHRIARUL HAQUE</td>
-                    <td align="right">2108271</td>
-                  </tr>
-                  <tr>
-                    <td align="right">67</td>
-                    <td>TARONNO DATTA TURJA</td>
-                    <td align="right">2108273</td>
-                  </tr>
-                  <tr>
-                    <td align="right">68</td>
-                    <td>TONMOY DAS</td>
-                    <td align="right">2108272</td>
+                    </tr>
+                    <tr>
+                      <td align="right">39</td>
+                      <td>MD NAIMUR RAHAMAN</td>
+                      <td align="right">2108150</td>
                       <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">69</td>
-                    <td>WARID UDDIN MONSURY</td>
-                    <td align="right">2108274</td>
+                    </tr>
+                    <tr>
+                      <td align="right">40</td>
+                      <td>MD RAYAN UL HOQUE</td>
+                      <td align="right">2108170</td>
+                      <td>Hazera-Taju Degree College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">41</td>
+                      <td>MD REEHANUL ISLAM</td>
+                      <td align="right">2108151</td>
+                      <td>Govt. Ashekane Awlia Degree College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">42</td>
+                      <td>MD ROBIUL ALAM</td>
+                      <td align="right">2108152</td>
+                      <td>Bakalia Govt. College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">43</td>
+                      <td>Md YEAHIA CHOWDHURY</td>
+                      <td align="right">2108154</td>
                       <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">70</td>
-                    <td>YAHIA</td>
-                    <td align="right">2209288</td>
+                    </tr>
+                    <tr>
+                      <td align="right">44</td>
+                      <td>MOHAMMAD ABDULLAABIR</td>
+                      <td align="right">2108157</td>
+                      <td>Hazera-Taju Degree College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">45</td>
+                      <td>MOHAMMAD TAHSANUL ALAM</td>
+                      <td align="right">2108153</td>
+                      <td>Govt. Commerce College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">46</td>
+                      <td>MOHAMMAD TALHA ZOBAYER</td>
+                      <td align="right">2108158</td>
                       <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">71</td>
-                    <td>YASIN AL ARFIN</td>
-                    <td align="right">2108275</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td align="right">72</td>
-                    <td>ZARIF MAHMUD MAHEE</td>
-                    <td align="right">2108213</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-    </div>
+                    </tr>
+                    <tr>
+                      <td align="right">47</td>
+                      <td>MUHTASIM BILLAH ZARIR</td>
+                      <td align="right">2108162</td>
+                      <td>Ispahani Public School And College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">48</td>
+                      <td>MUSFIQ KAMAL SAMIN</td>
+                      <td align="right">2108163</td>
+                      <td>Govt. Hazi Muhammad Mohsin College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">49</td>
+                      <td>NILADRY BANIK NIDHI</td>
+                      <td align="right">2108164</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td align="right">50</td>
+                      <td>PINAK MALLICK</td>
+                      <td align="right">2108165</td>
+                      <td>Chattogram Bandar College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">51</td>
+                      <td>RATUL SEN</td>
+                      <td align="right">2108169</td>
+                      <td>Bakalia Govt. College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">52</td>
+                      <td>RIDDHI BARUA</td>
+                      <td align="right">2108171</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td align="right">53</td>
+                      <td>ROHIT SINGHA</td>
+                      <td align="right">2108172</td>
+                      <td>Govt. Hazi Muhammad Mohsin College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">54</td>
+                      <td>ROKY CHOWDHURY</td>
+                      <td align="right">2108173</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td align="right">55</td>
+                      <td>SAYAN BISWAS</td>
+                      <td align="right">2108179</td>
+                      <td>Islamia Degree College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">56</td>
+                      <td>SAYED SAFAYET QAYUM NURAN</td>
+                      <td align="right">2108174</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td align="right">57</td>
+                      <td>SHOVON DEB NOBEL</td>
+                      <td align="right">2108181</td>
+                      <td>Bakalia Govt. College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">58</td>
+                      <td>SIDHARTHA BHATTACHARJEE</td>
+                      <td align="right">2108182</td>
+                      <td>Govt. Hazi Muhammad Mohsin College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">59</td>
+                      <td>SIDRAT MAHMUD SIHAN</td>
+                      <td align="right">2108183</td>
+                      <td>COXS BAZAR GOVT. COLLEGE</td>
+                    </tr>
+                    <tr>
+                      <td align="right">60</td>
+                      <td>SOMISHWER CHAKRABORTY</td>
+                      <td align="right">2108184</td>
+                      <td>Bakalia Govt. College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">61</td>
+                      <td>SOUMYA CHOWDHURY</td>
+                      <td align="right">2108185</td>
+                      <td>Sir Ashutosh Govt. College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">62</td>
+                      <td>SOUMYA SARKAR</td>
+                      <td align="right">2108186</td>
+                      <td>Hazera-Taju Degree College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">63</td>
+                      <td>SWARIT SEN</td>
+                      <td align="right">2108178</td>
+                      <td>Chittagong City Corporation Kaiser-Niloufer College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">64</td>
+                      <td>TANMOY MOHAJAN</td>
+                      <td align="right">2108190</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td align="right">65</td>
+                      <td>TOWFIQUE AHMED TANVIR</td>
+                      <td align="right">2108192</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="table-container">
+                <h2>List: 02; Shift: Morning; Group: Businesses Studies; Total: 15</h2>
+                <table id="table2" class="table table-bordered table-hover table-condensed">
+                  <thead>
+                    <tr>
+                      <th title="Field #1">SL</th>
+                      <th title="Field #2">NAME</th>
+                      <th title="Field #3">ID</th>
+                      <th title="Field #4">PRESENT POSITION</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td align="right">1</td>
+                      <td>ADITYA DAS</td>
+                      <td align="right">2108203</td>
+                      <td>Hazera-Taju Degree College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">2</td>
+                      <td>AVOY CHOWDHURY</td>
+                      <td align="right">2108123</td>
+                      <td>Chattogram Cantonment Public College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">3</td>
+                      <td>IFTEKHAR UDDIN MAHMUD</td>
+                      <td align="right">2108137</td>
+                      <td>Govt. Commerce College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">4</td>
+                      <td>IFTEKHER AHMED RIZVI</td>
+                      <td align="right">2108136</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td align="right">5</td>
+                      <td>MD NAIM AHSAN</td>
+                      <td align="right">2108149</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td align="right">6</td>
+                      <td>MOHAMMED ARIFUL ISLAM</td>
+                      <td align="right">2108144</td>
+                      <td>Bakalia Govt. College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">7</td>
+                      <td>MOHAMMED RIDOY</td>
+                      <td align="right">2108234</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td align="right">8</td>
+                      <td>MOHAMMED TASHRIF KAMAL</td>
+                      <td align="right">2108237</td>
+                      <td>Govt. Commerce College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">9</td>
+                      <td>MOHAMMED TOWSHIK AZAM LUBAN</td>
+                      <td align="right">2108238</td>
+                      <td></td>
+                    </tr>
+                    <td align="right">10</td>
+                    <td>MURTAZA MURSHED MUNTASIR</td>
+                    <td align="right">2108241</td>
+                    <td>Govt. Hazi Muhammad Mohsin College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">11</td>
+                      <td>PRANTA DEY</td>
+                      <td align="right">2108244</td>
+                      <td>Govt. Commerce College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">12</td>
+                      <td>PREM DHAR</td>
+                      <td align="right">2108246</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td align="right">13</td>
+                      <td>PRINCE NAG</td>
+                      <td align="right">2108248</td>
+                      <td>Govt. Commerce College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">14</td>
+                      <td>PROTUL BARUA</td>
+                      <td align="right">2108168</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td align="right">15</td>
+                      <td>SARFORAZ ABDULLAH</td>
+                      <td align="right">2108255</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td align="right">16</td>
+                      <td>SHAYON DAS GUPTA</td>
+                      <td align="right">2108180</td>
+                      <td>Hazera-Taju Degree College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">17</td>
+                      <td>SHREYAS CHOWDHURY</td>
+                      <td align="right">2108187</td>
+                      <td>None</td>
+                    </tr>
+                    <tr>
+                      <td align="right">18</td>
+                      <td>SWOMOYA GHOSH</td>
+                      <td align="right">2108264</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="table-container">
+                <h2>List: 03; Shift: Day; Group: Science; Total::72</h2>
+                <table id="table3" class="table table-bordered table-hover table-condensed">
+                  <thead>
+                    <tr>
+                      <th title="Field #1">SL</th>
+                      <th title="Field #2">NAME</th>
+                      <th title="Field #3">ID</th>
+                      <th title="Field #4">PRESENT POSITION</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td align="right">1</td>
+                      <td>A.K.M. SAMSBIN ALAM</td>
+                      <td align="right">2108201</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td align="right">2</td>
+                      <td>ABDULLAH AL NOMAN CHOWDHURY</td>
+                      <td align="right">2108202</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td align="right">3</td>
+                      <td>AFNAN MAHMOOD</td>
+                      <td align="right">2108204</td>
+                    </tr>
+                    <tr>
+                      <td align="right">4</td>
+                      <td>Ahsan Siddky Rifat</td>
+                      <td align="right">2310298</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td align="right">5</td>
+                      <td>ANKAN CHY</td>
+                      <td align="right">2108205</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td align="right">6</td>
+                      <td>ANNOY BHOWMIK</td>
+                      <td align="right">2108206</td>
+                      <td>Bakalia Govt. College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">7</td>
+                      <td>ARGHA BARUA</td>
+                      <td align="right">2108207</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td align="right">8</td>
+                      <td>DEBOJIT DAS</td>
+                      <td align="right">2108209</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td align="right">9</td>
+                      <td>FAHIMUL ISLAM</td>
+                      <td align="right">2108210</td>
+                    </tr>
+                    <tr>
+                      <td align="right">10</td>
+                      <td>FARDIN AHMED SAMIR</td>
+                      <td align="right">2209287</td>
+                    </tr>
+                    <tr>
+                      <td align="right">11</td>
+                      <td>FARHAN HASIN FAYSAL</td>
+                      <td align="right">2209281</td>
+                    </tr>
+                    <tr>
+                      <td align="right">12</td>
+                      <td>GALIB AHMED AMIN</td>
+                      <td align="right">2108211</td>
+                    </tr>
+                    <tr>
+                      <td align="right">13</td>
+                      <td>JITU ROY</td>
+                      <td align="right">2209285</td>
+                    </tr>
+                    <tr>
+                      <td align="right">14</td>
+                      <td>KASIB KHAN</td>
+                      <td align="right">2108214</td>
+                    </tr>
+                    <tr>
+                      <td align="right">15</td>
+                      <td>KAZI ATIQUR RAHMAN</td>
+                      <td align="right">2108215</td>
+                    </tr>
+                    <tr>
+                      <td align="right">16</td>
+                      <td>MANOB DEVNATH</td>
+                      <td align="right">2108219</td>
+                    </tr>
+                    <tr>
+                      <td align="right">17</td>
+                      <td>MD ADIYAT AZAD FAMAN</td>
+                      <td align="right">2108220</td>
+                    </tr>
+                    <tr>
+                      <td align="right">18</td>
+                      <td>MD MAHARAB HOSSAIN CHOWDHURY</td>
+                      <td align="right">2108218</td>
+                    </tr>
+                    <tr>
+                      <td align="right">19</td>
+                      <td>MD SAHARIAR NUR</td>
+                      <td align="right">2108235</td>
+                    </tr>
+                    <tr>
+                      <td align="right">20</td>
+                      <td>MD. ABDULLAH AL MAMUN</td>
+                      <td align="right">2209292</td>
+                    </tr>
+                    <tr>
+                      <td align="right">21</td>
+                      <td>MD. ABDUS SATTAR</td>
+                      <td align="right">2209290</td>
+                    </tr>
+                    <tr>
+                      <td align="right">22</td>
+                      <td>MD. HASRAT IBNUR HASIB</td>
+                      <td align="right">2310295</td>
+                    </tr>
+                    <tr>
+                      <td align="right">23</td>
+                      <td>MD. JAHIDULALAM MAHIN</td>
+                      <td align="right">2209282</td>
+                    </tr>
+                    <tr>
+                      <td align="right">24</td>
+                      <td>MD. MAHMUDUL HASAN</td>
+                      <td align="right">2108222</td>
+                    </tr>
+                    <tr>
+                      <td align="right">25</td>
+                      <td>MIRAJ ALI KHAN</td>
+                      <td align="right">2108223</td>
+                    </tr>
+                    <tr>
+                      <td align="right">26</td>
+                      <td>MOHAMMAD FAHAD ALAM</td>
+                      <td align="right">2209293</td>
+                    </tr>
+                    <tr>
+                      <td align="right">27</td>
+                      <td>MOHAMMAD NAIF</td>
+                      <td align="right">2209289</td>
+                    </tr>
+                    <tr>
+                      <td align="right">28</td>
+                      <td>MOHAMMAD NAZMUS SAKIB</td>
+                      <td align="right">2108217</td>
+                    </tr>
+                    <tr>
+                      <td align="right">29</td>
+                      <td>MOHAMMAD SAFIN ISLAM IFAZ</td>
+                      <td align="right">2209283</td>
+                    </tr>
+                    <tr>
+                      <td align="right">30</td>
+                      <td>MOHAMMAD SAMIR</td>
+                      <td align="right">2209284</td>
+                    </tr>
+                    <tr>
+                      <td align="right">31</td>
+                      <td>MOHAMMAD TAHASIN MAHAMUD</td>
+                      <td align="right">2108236</td>
+                    </tr>
+                    <tr>
+                      <td align="right">32</td>
+                      <td>MOHAMMED ABRAR AMIN</td>
+                      <td align="right">2108216</td>
+                    </tr>
+                    <tr>
+                      <td align="right">33</td>
+                      <td>MOHAMMED AL AMIN TAMIM</td>
+                      <td align="right">2108227</td>
+                    </tr>
+                    <tr>
+                      <td align="right">34</td>
+                      <td>MOHAMMED ASFAK UDDIN SIDDIQE</td>
+                      <td align="right">2108228</td>
+                    </tr>
+                    <tr>
+                      <td align="right">35</td>
+                      <td>MOHAMMED AZIZ KABIR</td>
+                      <td align="right">2108229</td>
+                    </tr>
+                    <tr>
+                      <td align="right">36</td>
+                      <td>MOHAMMED JOBAYED HOSSAIN</td>
+                      <td align="right">2108230</td>
+                    </tr>
+                    <tr>
+                      <td align="right">37</td>
+                      <td>MOHAMMED MOHSIN ABRAR</td>
+                      <td align="right">2108231</td>
+                    </tr>
+                    <tr>
+                      <td align="right">38</td>
+                      <td>MOHAMMED MUTTAKIN MAHIB</td>
+                      <td align="right">2108232</td>
+                    </tr>
+                    <tr>
+                      <td align="right">39</td>
+                      <td>MUGDHA BARUA</td>
+                      <td align="right">2310297</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td align="right">40</td>
+                      <td>MUSHFIQ-US-SALEHIN</td>
+                      <td align="right">2108242</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td align="right">41</td>
+                      <td>NILOY DAS GUPTA</td>
+                      <td align="right">2108243</td>
+                      <td>Chattogram Government Model School & College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">42</td>
+                      <td>PRANTIK BHATTACHARJEE</td>
+                      <td align="right">2108245</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td align="right">43</td>
+                      <td>PRIANTA DEBNATH</td>
+                      <td align="right">2108247</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td align="right">44</td>
+                      <td>RABBI HOSSEN FAHIM</td>
+                      <td align="right">2108276</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td align="right">45</td>
+                      <td>RAJ DAS GUPTA</td>
+                      <td align="right">2209279</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td align="right">46</td>
+                      <td>RAJKUMAR SEAL</td>
+                      <td align="right">2108249</td>
+                    </tr>
+                    <tr>
+                      <td align="right">47</td>
+                      <td>RANABIR SAHA</td>
+                      <td align="right">2108250</td>
+                    </tr>
+                    <tr>
+                      <td align="right">48</td>
+                      <td>SAAD BIN JABIR</td>
+                      <td align="right">2108252</td>
+                    </tr>
+                    <tr>
+                      <td align="right">49</td>
+                      <td>SADMAN SAKIB</td>
+                      <td align="right">2108253</td>
+                    </tr>
+                    <tr>
+                      <td align="right">50</td>
+                      <td>SAHAL SHARIF</td>
+                      <td align="right">2209291</td>
+                    </tr>
+                    <tr>
+                      <td align="right">51</td>
+                      <td>SAIDUL ISLAM</td>
+                      <td align="right">2108254</td>
+                    </tr>
+                    <tr>
+                      <td align="right">52</td>
+                      <td>SAKIBUL ISLAM SAKIB</td>
+                      <td align="right">2209280</td>
+                    </tr>
+                    <tr>
+                      <td align="right">53</td>
+                      <td>SHAHADAT HOSSAIN</td>
+                      <td align="right">2108256</td>
+                    </tr>
+                    <tr>
+                      <td align="right">54</td>
+                      <td>SHAYON SEN</td>
+                      <td align="right">2108257</td>
+                    </tr>
+                    <tr>
+                      <td align="right">55</td>
+                      <td>SHOUMYA BISWAS</td>
+                      <td align="right">2108259</td>
+                    </tr>
+                    <tr>
+                      <td align="right">56</td>
+                      <td>SOURAV MOHAJON</td>
+                      <td align="right">2209294</td>
+                    </tr>
+                    <tr>
+                      <td align="right">57</td>
+                      <td>SUDIP SEN</td>
+                      <td align="right">2310296</td>
+                    </tr>
+                    <tr>
+                      <td align="right">58</td>
+                      <td>SUJAY BARUA</td>
+                      <td align="right">2108261</td>
+                    </tr>
+                    <tr>
+                      <td align="right">59</td>
+                      <td>SUSANTA BARUA</td>
+                      <td align="right">2108262</td>
+                    </tr>
+                    <tr>
+                      <td align="right">60</td>
+                      <td>SWAPNIL DAS</td>
+                      <td align="right">2108263</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td align="right">61</td>
+                      <td>SYED AMIRUL ISLAM MAHMUD</td>
+                      <td align="right">2108265</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td align="right">62</td>
+                      <td>SYED MD ABRAR MUSTAKIM</td>
+                      <td align="right">2108266</td>
+                      <td>Chittagong Govt. City College</td>
+                    </tr>
+                    <tr>
+                      <td align="right">63</td>
+                      <td>SYED OBIDUL MUNTASIR</td>
+                      <td align="right">2108267</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td align="right">64</td>
+                      <td>TAHSIN HOSSAIN</td>
+                      <td align="right">2108268</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td align="right">65</td>
+                      <td>TAJBIR AHMED CHOWDHURY</td>
+                      <td align="right">2209286</td>
+                    </tr>
+                    <tr>
+                      <td align="right">66</td>
+                      <td>TANJIM SAHRIARUL HAQUE</td>
+                      <td align="right">2108271</td>
+                    </tr>
+                    <tr>
+                      <td align="right">67</td>
+                      <td>TARONNO DATTA TURJA</td>
+                      <td align="right">2108273</td>
+                    </tr>
+                    <tr>
+                      <td align="right">68</td>
+                      <td>TONMOY DAS</td>
+                      <td align="right">2108272</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td align="right">69</td>
+                      <td>WARID UDDIN MONSURY</td>
+                      <td align="right">2108274</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td align="right">70</td>
+                      <td>YAHIA</td>
+                      <td align="right">2209288</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td align="right">71</td>
+                      <td>YASIN AL ARFIN</td>
+                      <td align="right">2108275</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td align="right">72</td>
+                      <td>ZARIF MAHMUD MAHEE</td>
+                      <td align="right">2108213</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
           </section>
         </main>
         <footer class="my-5 pt-5 text-muted text-center text-small">
