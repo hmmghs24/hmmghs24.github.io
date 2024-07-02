@@ -218,7 +218,48 @@
 
         tr:nth-child(even) {
           background-color: #dcf0fa;
-      </style>
+     
+    input[type="text"] {
+        padding: 6px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+    }
+</style>
+<script>
+// JavaScript for filtering all tables
+function filterAllTables() {
+    var input, filter, tables, table, tr, td, i, j, txtValue;
+    input = document.getElementById("filterInput");
+    filter = input.value.toUpperCase();
+    tables = document.getElementsByTagName("table");
+
+    for (i = 0; i < tables.length; i++) {
+        table = tables[i];
+        tr = table.getElementsByTagName("tr");
+
+        for (j = 0; j < tr.length; j++) {
+            tr[j].style.display = "none"; // Hide the row by default
+
+            td = tr[j].getElementsByTagName("td");
+            for (let k = 0; k < td.length; k++) {
+                let cell = td[k];
+                if (cell) {
+                    txtValue = cell.textContent || cell.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[j].style.display = ""; // Show the row if filter matches
+                        break; // Break the inner loop once a match is found
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Add event listener to filter input
+document.getElementById("filterInput").addEventListener("keyup", filterAllTables);
+</script>
+            
       <body>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
           <div class="container-fluid">
