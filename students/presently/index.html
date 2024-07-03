@@ -231,39 +231,6 @@
           }
       </style>
       <script>
-        // JavaScript for filtering all tables
-        function filterAllTables() {
-          var input, filter, tables, table, tr, td, i, j, txtValue;
-          input = document.getElementById("filterInput");
-          filter = input.value.toUpperCase();
-          tables = document.getElementsByTagName("table");
-          for (i = 0; i < tables.length; i++) {
-            table = tables[i];
-            tr = table.getElementsByTagName("tr");
-            for (j = 0; j < tr.length; j++) {
-              let matchFound = false; // Flag to track if any cell matches the filter
-              td = tr[j].getElementsByTagName("td");
-              for (let k = 0; k < td.length; k++) {
-                let cell = td[k];
-                if (cell) {
-                  txtValue = cell.textContent || cell.innerText;
-                  if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    matchFound = true;
-                    break; // Break the inner loop once a match is found in this row
-                  }
-                }
-              }
-              // Show or hide the row based on matchFound flag
-              if (matchFound) {
-                tr[j].style.display = "";
-              } else {
-                tr[j].style.display = "none";
-              }
-            }
-          }
-        }
-        // Add event listener to filter input
-        document.getElementById("filterInput").addEventListener("keyup", filterAllTables);
       </script>
       <body>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -325,7 +292,6 @@
               <h2>* <a href="https://hmmghs24.github.io/registration"> বন্ধুদল-এর রেজিস্ট্রেশন করতে এখানে ক্লিক করুন।</a>
               </h2>
               <h2>* Last updated on: 24 June, 2024; 9:55 AM</h2>
-              <input type="text" id="filterInput" placeholder="নাম অথবা প্রতিষ্ঠান খুঁজুন">
               <div class="table-container">
                 <h2>List: 01; Shift: Morning; Group: Science; Total: 65</h2>
                 <table id="table1" class="table table-bordered table-hover table-condensed">
@@ -719,13 +685,13 @@
                       <td align="right">64</td>
                       <td>TANMOY MOHAJAN</td>
                       <td align="right">2108190</td>
-                      <td></td>
+                      <td>Islamia Degree College</td>
                     </tr>
                     <tr>
                       <td align="right">65</td>
                       <td>TOWFIQUE AHMED TANVIR</td>
                       <td align="right">2108192</td>
-                      <td></td>
+                      <td>Hazera-Taju Degree College</td>
                     </tr>
                   </tbody>
                 </table>
